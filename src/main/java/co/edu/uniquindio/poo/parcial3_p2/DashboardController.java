@@ -22,30 +22,34 @@ public class DashboardController {
     @FXML
     void onMedico(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/parcial3/Medico.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Medico.fxml"));
             Parent root = loader.load();
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
+            stage.setTitle("Panel Médico");
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
+            System.err.println("Error al cargar Medico.fxml: " + e.getMessage());
         }
     }
 
     @FXML
     void onPaciente(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/parcial3/Paciente.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Paciente.fxml"));
             Parent root = loader.load();
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
+            stage.setTitle("Panel Paciente");
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
+            System.err.println("Error al cargar Paciente.fxml: " + e.getMessage());
         }
     }
 }

@@ -2,8 +2,6 @@ package co.edu.uniquindio.poo.parcial3_p2.model;
 
 import java.time.LocalDate;
 
-import java.time.LocalDate;
-
 public class Cita implements ICita {
 
     private int hora;
@@ -23,8 +21,35 @@ public class Cita implements ICita {
         return 50000; // Valor base
     }
 
+    public int getHora() {
+        return hora;
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
     public Medico getMedico() {
         return medico;
     }
-}
 
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setHora(int hora) {
+        this.hora = hora;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+
+    public void setMedico(Medico medico) {
+        this.medico = medico;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+}
